@@ -41,7 +41,7 @@ jobs:
           python -m pytest -v
 
       - name: Build Docker image
-        run: docker build --tag devops-challenge:${{github.sha}} .
+        run: docker build --pull --tag devops-challenge:${{github.sha}} .
       - name: Scan Docker image with Trivy
         uses: aquasecurity/trivy-action@v0.36.0
         with:
