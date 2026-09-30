@@ -1,11 +1,5 @@
-FROM python:3.12-slim
+FROM python:3.12-alpine3.24
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends --only-upgrade \
-       libssl3t64 \
-       openssl \
-       openssl-provider-legacy \
-    && rm -rf /var/lib/apt/lists/*
 
 workdir /app
 
