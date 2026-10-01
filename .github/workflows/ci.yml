@@ -1,6 +1,4 @@
-name: Application CI
-
-
+name: Application CI for the docker application
 on:
   push: 
     branches: [main]
