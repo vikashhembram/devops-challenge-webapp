@@ -64,7 +64,7 @@ jobs:
 
       - name: Tag and push verified image
         if: github.event.name == 'push' && github.ref == 'refs/heads/main'
-          env:
+        env:
             DOCKERHUB_USERNAME: ${{vars.DOCKERHUB_USERNAME}}
         run: |
             IMAGE: "${DOCKERHUB_USERNAME}/devops-challenge:${GITHUB_SHA}
